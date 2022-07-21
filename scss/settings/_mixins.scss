@@ -1,0 +1,216 @@
+// Gradient
+@mixin cr-gradient($start, $end) {
+    background: $start; /* Old browsers */
+    background: -moz-linear-gradient(top, $start 0%, $end 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start), color-stop(100%,$end)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $start 0%,$end 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $start 0%,$end 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, $start 0%,$end 100%); /* IE10+ */
+    background: linear-gradient(to bottom, $start 0%,$end 100%); /* W3C */
+}
+
+@mixin cr-horizontal-gradient($start, $end) {
+    background: $start; /* Old browsers */
+    background: -moz-linear-gradient(left, $start 20%, $end 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(20%,$start), color-stop(100%,$end)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, $start 20%,$end 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, $start 20%,$end 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, $start 20%,$end 100%); /* IE10+ */
+    background: linear-gradient(to right, $start 20%,$end 100%); /* W3C */
+}
+
+@mixin cr-diagonal-gradient($start, $end) {
+    background: $start;
+    background: linear-gradient(135deg, $start 0%, $end 100%);
+}
+
+@mixin cr-radial-gradient($start, $end) {
+    background: $start;
+    background: radial-gradient(circle, $start 0%, $end 100%);
+}
+
+// Box Shadows
+@mixin cr-box-shadow($top, $left, $blur, $color, $inset: "") {
+    -webkit-box-shadow: $top $left $blur $color #{$inset};
+    -moz-box-shadow: $top $left $blur $color #{$inset};
+    box-shadow: $top $left $blur $color #{$inset};
+}
+
+// Transitions
+@mixin cr-transition($delay: .2s) {
+    -o-transition: $delay;
+    -ms-transition: $delay;
+    -moz-transition: $delay;
+    -webkit-transition: $delay;
+    transition: $delay;
+}
+
+// Box Sizing
+@mixin cr-box-sizing($val) {
+    box-sizing: $val;
+    -webkit-box-sizing: $val;
+    -moz-box-sizing: $val;
+}
+
+// Rounded Borders
+@mixin cr-border-radius($radius, $color: null) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+
+    @if $color != null {
+        border: 1px solid $color;
+    }
+}
+
+// Hide inline text
+@mixin cr-hide-text() {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+// :before and :after pseudo elements
+@mixin cr-before-after() {
+    position: absolute;
+    content: "";
+    @include hide-text();
+}
+
+// Automatically clear all floated children
+// Blatantly stolen and adapted to SASS from: http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin cr-clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    // For IE 6/7 only
+    & {
+        *zoom: 1;
+    }
+}
+
+// Media Queries
+@mixin respond-to($media) {
+    @if $media == smartphone {
+        @media only screen and (max-width : 640px) { @content; }
+    }
+    @else if $media == smartphone-portrait {
+        @media only screen and (max-width : 480px) { @content; }
+    }
+    @else if $media == tablet {
+        @media only screen and (max-width : 1024px) { @content; }
+    }
+    @else if $media == tablet-portrait {
+        @media only screen and (max-width : 768px) { @content; }
+    }
+    @else if $media == laptop {
+        @media only screen and (max-width : 1280px) { @content; }
+    }
+    @else if $media == desktop {
+        @media only screen and (min-width: 1025px) { @content; }
+    }
+    @else {
+        @media only screen and (max-width: $media) { @content; }
+    }
+}
+
+
+// TypeKit document classes
+@mixin cr-typekit() {
+    &,
+    html.wf-loading & {
+        visibility: hidden;
+    }
+    html.wf-active &,
+    html.wf-inactive &,
+    html.no-js & {
+        visibility: visible;
+    }
+}
+
+// Web font builder
+@mixin font($font: body, $weight: normal, $style: normal) {
+    @if $font == headings {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+    }
+    @else {
+        font-family: 'Prompt', sans-serif;
+
+        @if $weight == bold {
+            font-weight: 600;
+        }
+        @else {
+            font-weight: 400;
+        }
+    }
+}
+
+// Force hardware accleration
+@mixin cr-hardware-acceleration() {
+    -moz-transform: translate3d(0,0,0); /* Firefox 4 */
+    -webkit-transform: translate3d(0,0,0); /* Safari and Chrome */
+    -o-transform: translate3d(0,0,0); /* Opera */
+    -ms-transform: translate3d(0,0,0); /* IExplorer 10 */
+    transform: translate3d(0,0,0);
+}
+
+// Placeholder text color
+@mixin cr-placeholder() {
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+// Placeholder
+@mixin cr-vendor-prefix($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -o-#{$property}: $value;
+    -ms-#{$property}: $value;
+    #{$property}: $value;
+}
+
+
+// Retina 
+@mixin cr-retina() {
+    .backgroundsize & {
+        @content;
+    }
+     
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px),
+           only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1300px),
+           only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1300px),
+           screen and (min-device-pixel-ratio: 2) and (min-width: 1300px),
+           screen and (min-resolution: 192dpi) and (min-width: 1300px),
+           screen and (min-resolution: 2dppx)  and (min-width: 1300px) {
+               @content;
+    }
+}
+ 
+ 
+// Sprite 
+@mixin cr-sprite($background-position) {
+    background: url(../img/sprite.png) $background-position no-repeat;
+     
+    /*
+    @include cr-retina() {
+        background: url(../img/sprite-2x.png) $background-position no-repeat;
+        background-size: 0px 0px;
+    } 
+    */  
+}

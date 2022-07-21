@@ -1,0 +1,18 @@
+// Fonts
+@import 'font-awesome/fontawesome';
+@import 'font-awesome/regular';
+@import 'font-awesome/brands';
+@import 'font-awesome/solid';
+
+// Settings
+@import 'settings/reset';
+@import 'settings/variables';
+@import 'settings/mixins';
+
+// Base
+@import 'base/main';
+@import 'base/typography';
+@import 'base/forms';
+
+// Layouts
+@import 'layouts/dashboard';

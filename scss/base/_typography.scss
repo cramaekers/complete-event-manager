@@ -1,0 +1,139 @@
+body {
+    @include font();
+    color: $body;
+}
+p {
+    line-height: 1.5;
+
+    &:not(:last-child) {
+        margin-bottom: $s;
+    }
+}
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+
+    &:not(:last-child) {
+        margin-bottom: $s;
+    }
+}
+h1,
+.h1 {
+    @include font(headings);
+    font-size: 2rem;
+
+    &:not(:last-child) {
+        margin-bottom: $m;
+    }
+}
+h2,
+.h2 {
+    @include font(headings);
+    font-size: 1.5rem;
+}
+h3 {
+    &:not(:last-child) {
+        margin-bottom: $xs;
+    }
+}
+h4,
+.h4 {
+    @include font(headings);
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+        margin-bottom: $xs;
+    }
+}
+h5,
+.h5 {
+    @include font(body, bold);
+    font-size: 1rem;
+}
+.outline {
+    display: inline-block;
+    border: 3px solid;
+    padding: 5px 10px;
+}
+.highlight {
+    display: inline-block;
+    background: $black;
+    color: $teal;
+    padding: 0 10px;
+}
+a {
+    @include cr-transition();
+    color: $coral;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:hover {
+        color: $coral-dark;
+    }
+}
+.button {
+    @include font(headings);
+    display: inline-block;
+    transition: .3s;
+    background: linear-gradient(90deg, #F87769 0%, #E72FDC 50%, #7E38D3 100%);
+    border: 3px solid transparent;
+    background-size: 110% auto;
+    background-position: center left -5px;
+    color: $white;
+    text-transform: uppercase;
+    padding: 12px $m;
+    border-radius: 50px;
+    text-decoration: none;
+    -webkit-appearance: none;
+
+    @include respond-to(smartphone) {
+        width: 100%;
+        text-align: center;
+    }
+
+    &:hover,
+    &:active {
+        border-color: $white;
+        color: $white;
+    }
+
+    &--outline {
+        background: none;
+        border-color: $coral;
+        color: $body;
+        padding: 9px $m;
+
+        &:hover,
+        &:active {
+            background: $coral;
+            color: $white;
+            border-color: $coral;
+        }
+    }
+}
+.align-center {
+    text-align: center;
+}
+.wysiwyg {
+    ul,
+    ol {
+        margin: 0 0 0 18px;
+        padding: 0;
+
+        &:not(:last-child) {
+            margin-bottom: $s;
+        }
+
+        li {
+            @extend p;
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-bottom: $xs;
+            }
+        }
+    }
+}

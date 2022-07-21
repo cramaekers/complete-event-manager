@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Complete Event Manager</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&family=Rubik:wght@700&display=swap" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<a href="#" id="logo">
+			<img src="img/complete-logo.png" alt="Complete Weddings + Events Event Manager" />
+		</a>
+		<a href="#" id="menu-button"><div></div></a>
+		<div id="avatar">
+			<a href="#" id="avatar__trigger">
+				<div id="avatar__image" style="background-image: url(img/demo/sarah.jpg);"></div>
+			</a>
+			<ul>
+				<li><a href="#">Account</a></li>
+				<li><a href="#">Log Out</a></li>
+			</ul>
+		</div>
+	</header>
+	<div id="menu-overlay"></div>
+	<div id="page-wrap">
+		<aside id="sidebar">	
+			<a href="#" id="sidebar__event-switcher">Event Name<br><span>Switch Event</span></a>
+			<nav>
+				<ul>
+					<li class="active"><a href="#">Dashboard</a></li>
+					<li><a href="#">Event Plan</a></li>
+					<li><a href="#">Coordinator Plan</a></li>
+					<li><a href="#">DJ Plan</a></li>
+					<li><a href="#">Photo & Video Plan</a></li>
+					<li><a href="#">Timeline Tool</a></li>
+					<li><a href="#">Payments</a></li>
+				</ul>
+			</nav>
+			<div id="sidebar__call-to-action">
+				<p>Contact Shayla with questions!</p>
+				<p><a href="tel:4022897300">402.289.7300</a></p>
+			</div>
+		</aside>
+		<main id="dashboard">
+			<div id="dashboard__intro" class="padded">
+				<div class="container flex">
+					<div id="dashboard__intro__image" style="background-image: url(img/demo/sarah.jpg);"></div>
+					<div id="dashboard__intro__content">
+						<h3 class="h1 outline">Hey, Sarah!</h3>
+						<div id="dashboard__intro__todo" class="wysiwyg">
+							<h4>To Do:</h4>
+							<ol>
+								<li>Make your initial deposit to lock in your event date</li>
+								<li>Fill out your DJ Plan to select your style of music</li>
+							</ol>
+						</div>
+						<a href="#" class="button">Book My Date</a>
+					</div>
+				</div>
+			</div>
+			<div id="dashboard__articles" class="padded">
+				<div class="container">
+					<h2 class="h1 align-center"><span class="highlight">100</span> days until your wedding!</h2>
+					<div class="flex flex--3">
+						<div>
+							<article class="article">
+								<div class="article__image">
+									<img src="img/demo/article-1.png" alt="">
+								</div>
+								<div class="article__details">
+									<h5>How to Throw a Party the Complete Way</h5>
+									<a href="#" class="button button--outline">Read More</a>
+								</div>
+							</article>
+						</div>
+						<div>
+							<article class="article">
+								<div class="article__image">
+									<img src="img/demo/article-2.png" alt="">
+								</div>
+								<div class="article__details">
+									<h5>How to Throw a Party the Complete Way</h5>
+									<a href="#" class="button button--outline">Read More</a>
+								</div>
+							</article>
+						</div>
+						<div>
+							<article class="article">
+								<div class="article__image">
+									<img src="img/demo/article-3.png" alt="">
+								</div>
+								<div class="article__details">
+									<h5>How to Throw a Party the Complete Way</h5>
+									<a href="#" class="button button--outline">Read More</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="dashboard__promotions" class="padded">
+				<div class="container flex flex--2">
+					<div>
+						<a href="#" class="promotion">
+							<img src="img/demo/promo-1.jpg" alt="">
+						</a>
+					</div>
+					<div>
+						<a href="#" class="promotion">
+							<img src="img/demo/promo-2.jpg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<footer>
+		<div class="container flex">
+			<p>Copyright Complete 2021</p>
+			<ul class="social">
+				<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+			</ul>
+		</div>		
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/main.min.js"></script>
+</body>
+</html>

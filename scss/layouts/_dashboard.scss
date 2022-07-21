@@ -1,0 +1,90 @@
+#dashboard {
+	&__intro {
+		background: $teal;
+
+		.flex {
+			flex-flow: row nowrap;
+		}
+		&__image {
+			flex: 0 0 250px;
+			height: 250px;
+			background-size: cover;
+			background-position: center;
+			margin-right: $m;
+			border-radius: 50%;
+
+			@include respond-to(1280px) {
+				flex: 0 0 200px;
+				height: 200px;
+			}
+			@include respond-to(tablet-portrait) {
+				flex: 0 0 150px;
+				height: 150px;
+			}
+			@include respond-to(smartphone) {
+				display: none;
+			}
+		}
+		&__content {
+			flex: auto;
+		}
+
+		.h1 {
+			margin: 0;
+		}
+		&__todo {
+			background: $white;
+			padding: $m;
+			margin: $s 0;
+			border-top: 5px solid;
+        	border-image: linear-gradient(to left, $coral, $blue) 1;
+        	max-width: 600px;
+		}
+		.outline {
+			border-color: $white;
+		}
+	}
+	&__articles {
+		.article {
+			text-align: center;
+
+			&__image {
+				display: inline-block;
+				margin-bottom: $s;
+				width: 80%;
+			}
+			&__details {
+				h5 {
+					margin-bottom: $s;
+				}
+			}
+		}
+	}
+	&__promotions {
+		background: $grey-light;
+
+		.promotion {
+			@extend .pattern;
+			display: block;
+			width: 90%;
+			margin: 0 auto;
+
+			@media (hover: hover) {			
+				&:hover {
+					img {
+						transform: translate(-$s, -$s);
+					}
+				}
+			}
+
+			img {
+				@include cr-transition();
+				transform: translate(-$m, -$m);
+
+				@include respond-to(smartphone) {
+					transform: translate(-$s, -$s);
+				}
+			}
+		}
+	}
+}

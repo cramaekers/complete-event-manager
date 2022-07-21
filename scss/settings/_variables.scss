@@ -1,0 +1,21 @@
+// Colors
+$black: #000;
+$white: #fff;
+$grey: #6E6E6E;
+$grey-light: #F5F5F5;
+$coral: #F87769;
+$coral-dark: darken($coral, 10%);
+$teal: #3CCAC5;
+$blue: #1039D2;
+$purple: #3B3AD2;
+$body: $black;
+
+// Sizing
+$menu-breakpoint: 980px;
+
+// Spacing
+$xs: .25rem;
+$s: .75rem;
+$m: 2rem;
+$l: 4rem;
+$xl: 6rem;
