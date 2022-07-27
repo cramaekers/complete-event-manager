@@ -32,10 +32,18 @@ h2,
 .h2 {
     @include font(headings);
     font-size: 1.5rem;
-}
-h3 {
+    text-transform: none;
+
     &:not(:last-child) {
-        margin-bottom: $xs;
+        margin-bottom: $m;
+    }
+}
+h3,
+.h3 {
+    @include font(headings);
+
+    &:not(:last-child) {
+        margin-bottom: $s;
     }
 }
 h4,
@@ -92,6 +100,7 @@ a {
     @include respond-to(smartphone) {
         width: 100%;
         text-align: center;
+        justify-content: center;
     }
 
     &:hover,
@@ -111,6 +120,16 @@ a {
             background: $coral;
             color: $white;
             border-color: $coral;
+        }
+    }
+
+    &--teal {
+        &.button--outline {
+            border-color: $teal;
+
+            &:hover {
+                background: $teal;
+            }
         }
     }
 }

@@ -9,6 +9,9 @@
 @import 'settings/variables';
 @import 'settings/mixins';
 
+// Plugins
+@import '../node_modules/owl.carousel/dist/assets/owl.carousel.min';
+
 // Base
 @import 'base/main';
 @import 'base/typography';
@@ -16,3 +19,4 @@
 
 // Layouts
 @import 'layouts/dashboard';
+@import 'layouts/plans';

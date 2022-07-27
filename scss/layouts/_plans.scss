@@ -1,0 +1,189 @@
+#plan {
+	.autosave-wrapper {
+		text-align: right;
+		margin-bottom: $m;
+
+		span {
+			@extend .button;
+			display: inline-flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			background: $teal;
+			border: none;
+
+			&:after {
+				content: '';
+				display: block;
+				background: url(../img/icon-check.svg);
+				margin-left: $s;
+				width: 15px;
+				height: 15px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+	}
+	.press-enter {
+		display: flex;
+		flex-flow: row nowrap;
+		color: #C1C0C0;
+		margin-left: $s;
+
+		@include respond-to(smartphone) {
+	        display: none;
+	    }
+
+		img {
+			width: 25px;
+			margin-left: 10px;
+		}
+	}
+	.plan {
+		position: relative;
+
+		&.plan--initial {
+			.plan__image {
+				width: 40%;
+				border: none;
+
+				@include respond-to(smartphone) {
+			        width: 150px;
+			    }
+
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+
+		&__image {
+			@include cr-transition();
+			position: absolute;
+			width: 100px;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			background-size: cover;
+			background-position: center;
+			z-index: 10;
+			border-left: 4px solid $teal;
+
+			@include respond-to(tablet) {
+				border-width: 2px;
+			}
+			@include respond-to(smartphone) {
+				width: 50px;
+			}
+
+			&:after {
+				@include cr-transition();
+				content: '';
+				display: block;
+				position: absolute;
+				border-left: 4px solid $teal;
+				width: 100%;
+				height: 100%;
+				left: $s;
+				top: $s;
+				border: 4px solid $teal;
+				opacity: 0;
+
+				@include respond-to(tablet) {
+					left: $xs;
+					top: $xs;
+					right: -$xs;
+					bottom: -$xs;
+					border-width: 2px;
+					width: auto;
+					height: auto;
+				}
+			}
+		}
+		&__carousel {
+
+		}
+	}
+	.slide {
+		width: 100%;
+		//padding: 0 1px;
+
+		&.slide--title {
+			.slide__content {
+				width: 60%;
+				padding: $m $s;
+
+				@include respond-to(smartphone) {
+					width: calc(100% - 150px);
+				}
+
+				h2 {
+					@include cr-horizontal-gradient($blue, $coral);
+					color: $white;
+					padding: 1rem;
+					width: calc(100% + 2rem);
+					margin-left: -1rem;
+				}
+				p {
+					@extend h3;
+				}
+			}
+		}
+
+		&__content {
+			width: calc(100% - 100px);
+			padding-right: $m;
+			position: relative;
+			min-height: 400px;
+
+			@include respond-to(smartphone) {
+				min-height: 0;
+				width: calc(100% - 50px);
+			}
+
+			.h1 {
+				text-transform: none;
+			}
+			.h4 {
+				color: $teal;
+			}
+		}
+		&__nav {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-end;
+			align-items: center;
+			margin-top: $m;
+
+			@include respond-to(smartphone) {
+				justify-content: space-between;
+			}
+
+			> div {
+				margin-right: auto;
+				color: $grey;
+
+				@include respond-to(smartphone-portrait) {
+					width: 100%;
+					margin-bottom: $s;
+					text-align: center;
+				}
+			}
+			.button {
+				&:not(:last-child) {
+					@media (min-width: 641px) {
+						margin-right: $s;
+					}
+				}
+
+				@include respond-to(smartphone-portrait) {
+					width: 48.5%;
+
+					&:nth-child(2):last-child {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Complete Event Manager</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&family=Rubik:wght@700&display=swap" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<a href="#" id="logo">
+			<img src="img/complete-logo.png" alt="Complete Weddings + Events Event Manager" />
+		</a>
+		<a href="#" id="menu-button"><div></div></a>
+		<div id="avatar">
+			<a href="#" id="avatar__trigger">
+				<div id="avatar__image" style="background-image: url(img/demo/sarah.jpg);"></div>
+			</a>
+			<ul>
+				<li><a href="#">Account</a></li>
+				<li><a href="#">Log Out</a></li>
+			</ul>
+		</div>
+	</header>
+	<div id="menu-overlay"></div>
+	<div id="page-wrap">
+		<aside id="sidebar">	
+			<a href="#" id="sidebar__event-switcher">Event Name<br><span>Switch Event</span></a>
+			<nav>
+				<ul>
+					<li><a href="/">Dashboard</a></li>
+					<li class="active"><a href="/event-plan.html">Event Plan</a></li>
+					<li><a href="#">Coordinator Plan</a></li>
+					<li><a href="#">DJ Plan</a></li>
+					<li><a href="#">Photo & Video Plan</a></li>
+					<li><a href="#">Timeline Tool</a></li>
+					<li><a href="#">Payments</a></li>
+				</ul>
+			</nav>
+			<div id="sidebar__call-to-action">
+				<p>Contact Shayla with questions!</p>
+				<p><a href="tel:4022897300">402.289.7300</a></p>
+			</div>
+		</aside>
+		<main id="plan">
+			<div class="padded">
+				<div class="container">
+					<div class="autosave-wrapper">
+						<span>Autosaved</span>
+					</div>
+					<form class="plan plan--initial" action="" style="min-width: 100%;">
+						<div class="plan__image" style="background-image: url(img/demo/wedding.jpg);"></div>
+						<div class="plan__carousel owl-carousel">							
+							<div class="slide slide--title">				
+								<div class="slide__content">
+									<h2>Event Plan</h2>
+									<p>Get started with the details of your event. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure asperiores temporibus quia omnis, dolor sit esse, vero assumenda nostrum at, delectus debitis mollitia culpa unde itaque impedit quaerat maiores.</p>
+									<div class="flex align-center">
+										<a href="#" class="button button--outline button--teal next">Let's Go</a>
+										<div class="press-enter">Press Enter <img src="/img/icon-enter.svg"></div>
+									</div>
+									<div class="slide__nav">
+										<div>1/3</div>
+									</div>
+								</div>
+							</div>							
+							<div class="slide slide--section">
+								<div class="slide__content">
+									<h2 class="h4">Event Plan</h2>
+									<h4 class="h1">General Information</h4>
+									<div class="fields">
+										<div class="field field--half">
+											<label for="#">Your Name</label>
+											<input type="text">
+										</div>
+										<div class="field field--half">
+											<label for="#">Fiance's Name</label>
+											<input type="text">
+										</div>
+										<div class="field field--half field--error">
+											<label for="#">Your Email</label>
+											<input type="text">
+											<p class="field__error">Please enter a valid email address.</p>
+										</div>
+										<div class="field field--half">
+											<label for="#">Fiance's Email</label>
+											<input type="text">
+										</div>
+										<div class="field field--half">
+											<label for="#">Your Phone Number (Cell/Home)</label>
+											<input type="text">
+										</div>
+										<div class="field field--half">
+											<label for="#">Fiance's Phone Number (Cell/Home)</label>
+											<input type="text">
+										</div>
+									</div>
+									<div class="slide__nav">
+										<div>2/3</div>
+										<a href="#" class="button button--outline previous">Back</a>
+										<a href="#" class="button button--outline next">Next</a>
+									</div>
+								</div>
+							</div>
+							<div class="slide slide--section">								
+								<div class="slide__content">
+									<h2 class="h4">Event Plan</h2>
+									<h4 class="h1">General Information</h4>
+									<p>You're all done. This is the last slide.</p>						
+									<div class="slide__nav">
+										<div>3/3</div>
+										<a href="#" class="button button--outline previous">Back</a>
+										<button type="submit" class="button button--outline button--teal">Submit</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+	</div>
+	<footer>
+		<div class="container flex">
+			<p>Copyright Complete 2021</p>
+			<ul class="social">
+				<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+			</ul>
+		</div>		
+	</footer>
+	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/main.min.js"></script>
+</body>
+</html>

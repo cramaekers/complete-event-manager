@@ -1,26 +1,56 @@
 form {
-    .field {
-        margin-bottom: $s;
+    .fields {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
 
-        label {
-            display: block;         
-            margin-bottom: $xs;
-            color: $coral;
-        }
-        input[type="text"],
-        textarea {
-            transition: .3s;
+        .field {
+            margin-bottom: $s;
             width: 100%;
-            background: $grey-light;
-            border: 2px solid $grey-light;
-            border-radius: none;
-            padding: $s;
-            outline: none;
 
-            &:focus {
-                background: none;
+            &--error {
+                label {
+                    color: $coral !important;
+                }
+                input:not(input[type="radio"]):not(input[type="checkbox"]),
+                textarea {
+                    background: rgba($coral, .1) !important;
+                }
+            }
+
+            &--half {
+                width: 48%;
+
+                @include respond-to(smartphone-portrait) {
+                    width: 100%;
+                }
+            }
+
+            &__error {
+                display: block;
+                color: $coral;
+                font-size: .8rem;
+                font-style: italic;
+                margin-top: $xs;
+            }
+
+            label {
+                display: block;         
+                margin-bottom: $xs;
+                color: $grey;
+            }
+            input:not(input[type="radio"]):not(input[type="checkbox"]),
+            textarea {
+                transition: .3s;
+                width: 100%;
+                background: $grey-light;
+                border: none;
+                border-radius: 0;
+                padding: .5rem;
+                outline: none;
+                -webkit-appearance: none;                
             }
         }
-
     }
 }

@@ -37,6 +37,9 @@ html {
     flex-flow: row wrap;
     justify-content: flex-start;
 
+    &.align-center {
+        align-items: center;
+    }
     &.flex--3 {
         align-items: flex-start;
 
@@ -107,7 +110,6 @@ img {
 // Wrapper
 body {
     padding-top: 100px;
-    overflow-x: hidden;
 
     &.menu-active {
         overflow: hidden;
@@ -317,7 +319,7 @@ header {
 footer {
     background: $black;
     color: $white;
-    padding: $m 0;
+    padding: $s 0;
 
     .flex {
         justify-content: center;
@@ -371,7 +373,7 @@ footer {
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
-    width: 100%;
+    //width: 100%;
 
     @include respond-to($menu-breakpoint) {
         display: block;
@@ -381,14 +383,15 @@ footer {
 #sidebar {
     position: relative;
     z-index: 1;
-    flex: 0 0 300px;
+    width: 300px;
+    //flex: 0 0 300px;
     background: $grey-light;
     box-shadow: 0 0 10px rgba($black, .2);
     max-height: 100%;
-    overflow-y: auto;
+    //overflow-y: auto;
 
     @include respond-to(tablet) {
-        flex: 0 0 250px;
+        width: 250px;
     }
     @include respond-to($menu-breakpoint) {
         @include cr-transition();
@@ -398,7 +401,6 @@ footer {
         max-width: 90%;
         top: 70px;
         bottom: 0;
-        overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         flex: none;
         opacity: 0;
@@ -521,7 +523,16 @@ footer {
     }
 }
 main {
-    flex: auto;
+    width: calc(100% - 300px);
+    //flex: 1;
+    //overflow: hidden;
+
+    @include respond-to(tablet) {
+        width: calc(100% - 250px);
+    }
+    @include respond-to($menu-breakpoint) {
+        width: 100%;
+    }
 
     .padded {
         padding: $xl 0;
