@@ -1,0 +1,19 @@
+<svg id="Group_1124" data-name="Group 1124" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="69.951" height="59" viewBox="0 0 69.951 59">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1509" data-name="Rectangle 1509" width="69.951" height="59" fill="#3ccac5"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1123" data-name="Group 1123" clip-path="url(#clip-path)">
+    <path id="Path_627" data-name="Path 627" d="M80.65,39.884A11.689,11.689,0,1,0,68.96,28.2,11.7,11.7,0,0,0,80.65,39.884m0-18.3a6.61,6.61,0,1,1-6.611,6.61,6.618,6.618,0,0,1,6.611-6.61" transform="translate(-33.934 -8.122)" fill="#3ccac5"/>
+    <path id="Path_628" data-name="Path 628" d="M86.975,69.144v4.624h5.079v-5.44H86.975Z" transform="translate(-42.798 -33.623)" fill="#3ccac5"/>
+    <rect id="Rectangle_1503" data-name="Rectangle 1503" width="5.44" height="5.079" transform="translate(30.727 32.471) rotate(-45.008)" fill="#3ccac5"/>
+    <rect id="Rectangle_1504" data-name="Rectangle 1504" width="4.624" height="5.079" transform="translate(55.844 7.353) rotate(-44.992)" fill="#3ccac5"/>
+    <rect id="Rectangle_1505" data-name="Rectangle 1505" width="5.44" height="5.079" transform="translate(26.644 17.533)" fill="#3ccac5"/>
+    <rect id="Rectangle_1506" data-name="Rectangle 1506" width="4.624" height="5.079" transform="translate(62.165 17.533)" fill="#3ccac5"/>
+    <rect id="Rectangle_1507" data-name="Rectangle 1507" width="5.079" height="5.44" transform="translate(30.727 7.675) rotate(-44.996)" fill="#3ccac5"/>
+    <rect id="Rectangle_1508" data-name="Rectangle 1508" width="5.079" height="4.624" transform="translate(55.844 32.793) rotate(-45.004)" fill="#3ccac5"/>
+    <path id="Path_629" data-name="Path 629" d="M92.054,4.624V0H86.975v5.44h5.079Z" transform="translate(-42.798 0)" fill="#3ccac5"/>
+    <path id="Path_630" data-name="Path 630" d="M58.661,81.007l-16.91,1.915L22.708,71.758,0,94.31H69.951ZM23.115,77.884,40.642,88.159,57.15,86.29l2.783,2.941H11.074Z" transform="translate(0 -35.31)" fill="#3ccac5"/>
+  </g>
+</svg>

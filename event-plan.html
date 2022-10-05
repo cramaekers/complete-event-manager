@@ -98,6 +98,160 @@
 											<label for="#">Fiance's Phone Number (Cell/Home)</label>
 											<input type="text">
 										</div>
+										<div class="field">
+											<label for="">Number of Guests</label>
+											<div class="boxed-radio boxed-radio--4">
+												<label><input type="radio" name="guests" value="0-50">0-50</label>
+												<label><input type="radio" name="guests" value="51-75">51-75</label>
+												<label><input type="radio" name="guests" value="76-100">76-100</label>
+												<label><input type="radio" name="guests" value="101-150">101-150</label>
+												<label><input type="radio" name="guests" value="151-200">151-200</label>
+												<label><input type="radio" name="guests" value="201-250">201-250</label>
+												<label><input type="radio" name="guests" value="251-299">251-299</label>
+												<label><input type="radio" name="guests" value="300+">300+</label>
+											</div>
+										</div>
+										<div class="field">
+											<label for="">Vendors</label>
+											<div class="boxed-checkbox boxed-checkbox--3">
+												<label class="complete"><input type="checkbox" name="vendors" value="DJ" checked disabled>DJ</label>
+												<label><input type="checkbox" name="vendors" value="Photographer" checked>Photographer</label>
+												<label><input type="checkbox" name="vendors" value="Videographer">Videographer</label>
+												<label><input type="checkbox" name="vendors" value="Photo Booth">Photo Booth</label>
+												<label><input type="checkbox" name="vendors" value="Caterer">Caterer</label>
+												<label><input type="checkbox" name="vendors" value="Wedding Planner">Wedding Planner</label>
+											</div>
+										</div>
+										<div class="field">
+											<label for="games">Music Games</label>
+											<div class="boxed-checkbox boxed-checkbox--3">
+												<label data-video-url="https://www.youtube.com/"><input type="checkbox" name="games" value="Pass the Buck">Pass the Buck</label>
+												<label data-video-url="https://www.youtube.com/"><input type="checkbox" name="games" value="Shoe Game">Shoe Game</label>
+												<label data-video-url="https://www.youtube.com/"><input type="checkbox" name="games" value="Wedding Party Feud">Wedding Party Feud</label>
+											</div>
+										</div>
+										<div class="field">
+											<label for="time-of-day">Time of Day</label>
+											<div class="boxed-checkbox boxed-checkbox--3">
+												<label data-icon-url="img/demo/icon-morning.svg"><input type="checkbox" name="time-of-day" value="Morning">Morning</label>
+												<label data-icon-url="img/demo/icon-afternoon.svg"><input type="checkbox" name="time-of-day" value="Morning">Afternoon</label>
+												<label data-icon-url="img/demo/icon-evening.svg"><input type="checkbox" name="time-of-day" value="Morning">Evening</label>
+											</div>
+										</div>
+										<div class="field">
+											<label for="sample-radio-options">Standard Radio Buttons</label>
+											<ul class="radio">
+												<li><label><input type="radio" name="sample-radio-options" value="A">Option A</label></li>
+												<li><label><input type="radio" name="sample-radio-options" value="B">Option B</label></li>
+											</ul>
+										</div>
+										<div class="field field--half">
+											<label for="sample-checkbox-options">Sample Checkboxes</label>
+											<ul class="checkbox">
+												<li><label><input type="checkbox" name="sample-checkbox-options" value="1">Option 1</label></li>
+												<li><label><input type="checkbox" name="sample-checkbox-options" value="2">Option 2</label></li>
+											</ul>
+										</div>
+										<div class="field field--half">
+											<label for=""># of Sisters</label>
+											<select name="sample-select">
+												<option value="0">0</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+											</select>
+										</div>
+										<div class="field">
+											<label for="">File Upload</label>
+											<input type="file" name="file">
+										</div>
+										<div class="field">
+											<label for="">Start Time</label>
+											<div class="slider-wrap">
+												<div class="flex">
+													<input type="text" disabled>
+												</div>
+												<div class="slider" data-start="540"></div>
+											</div>
+										</div>
+										<div class="field">
+											<label for="">Start and End Time</label>
+											<div class="slider-wrap">
+												<div class="flex">
+													<input type="text" disabled>
+													<span>to</span>
+													<input type="text" disabled>
+												</div>
+												<div class="slider" data-start="540" data-end="1200"></div>
+											</div>
+										</div>
+										<div class="field">
+											<label for="">Sortable List</label>
+											<ul class="sortable">
+												<li>One</li>
+												<li>Two</li>
+												<li>Three</li>
+											</ul>
+											<input type="hidden" disabled>
+										</div>
+										<div class="field field--half">
+											<label for="">Bridesmaids</label>
+											<div class="repeater">
+												<div>
+													<input type="text" placeholder="Add...">
+													<button type="button"><i class="fa fa-plus"></i></button>
+												</div>
+												<ul class="sortable"></ul>
+												<input type="hidden" disabled>
+											</div>
+										</div>
+										<div class="field field--half">
+											<label for="">Groomsmen</label>
+											<div class="repeater">
+												<div>
+													<input type="text" placeholder="Add...">
+													<button type="button"><i class="fa fa-plus"></i></button>
+												</div>
+												<ul class="sortable"></ul>
+												<input type="hidden" disabled>
+											</div>
+										</div>
+										<div class="field field--half">
+											<label for="">Single Color Picker</label>
+											<div class="color-picker">
+												<ul>
+													<li style="--color: #F87769;"><a href="#"></a></li>
+													<li style="--color: #1039D2;"><a href="#"></a></li>
+													<li style="--color: #3CCAC5;"><a href="#"></a></li>
+												</ul>
+												<select name="color" id="" disabled>
+													<option value="#F87769" selected>Coral</option>
+													<option value="#1039D2">Blue</option>
+													<option value="#3CCAC5">Teal</option>
+												</select>
+											</div>
+										</div>
+										<div class="field field--half">
+											<label for="">Multi Color Picker</label>
+											<p class="field__description">Upload a photo of your colors or select mulitple colors below.</p>
+											<input type="file" name="file" value="Upload Photos">
+											<div class="color-picker color-picker--multiple">
+												<ul>
+													<li style="--color: #F87769;"><a href="#"></a></li>
+													<li style="--color: #1039D2;"><a href="#"></a></li>
+													<li style="--color: #3CCAC5;"><a href="#"></a></li>
+												</ul>
+												<select name="color" id="" multiple disabled>
+													<option value="#F87769" selected>Coral</option>
+													<option value="#1039D2" selected>Blue</option>
+													<option value="#3CCAC5">Teal</option>
+												</select>
+											</div>
+										</div>
+										<div class="field">
+											<p>Your DJ’s set up time is 60-90 minutes prior to the start time of your event. Please have a 6-8 foot table placed where you would like the DJ to set up. Two 110 volt outlets are required for the DJ system. Please allow 3-4 feet of clearance on either side of the tables for speakers and lights.</p>
+										</div>
 									</div>
 									<div class="slide__nav">
 										<div>2/3</div>
@@ -114,7 +268,7 @@
 									<div class="slide__nav">
 										<div>3/3</div>
 										<a href="#" class="button button--outline previous">Back</a>
-										<button type="submit" class="button button--outline button--teal">Submit</button>
+										<button type="button" type="submit" class="button button--outline button--teal">Submit</button>
 									</div>
 								</div>
 							</div>
@@ -136,6 +290,9 @@
 	</footer>
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="node_modules/nouislider/dist/nouislider.min.js"></script>	
+	<script type="text/javascript" src="node_modules/dragdroptouch-bug-fixed/dist/DragDropTouch.js"></script>
+	<script type="text/javascript" src="node_modules/html5sortable/dist/html5sortable.min.js"></script>
 	<script type="text/javascript" src="js/main.min.js"></script>
 </body>
 </html>
