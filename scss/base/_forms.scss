@@ -156,35 +156,62 @@ form {
             }
             .boxed-radio,
             .boxed-checkbox {
+                margin-top: $s;
+
                 &--4 {
                     li {
-                        width: 23.5%;
-                        margin: 0 1%;
+                        @media (min-width: 641px) {
+                            width: 23.5%;
+                            margin: 0 1%;
 
-                        &:nth-child(4n+1) {
-                            margin-left: 0;
+                            &:nth-child(4n+1) {
+                                margin-left: 0;
+                            }
+                            &:nth-child(4n+4) {
+                                margin-right: 0;
+                            }
+                            &:nth-child(n+5) {
+                                margin-top: 2%
+                            }
                         }
-                        &:nth-child(4n+4) {
-                            margin-right: 0;
-                        }
-                        &:nth-child(n+5) {
-                            margin-top: 2%
+                        @include respond-to(smartphone) {
+                            width: 48%;
+                            margin: 0 2%;
+
+                            &:nth-child(odd) {
+                                margin-left: 0;
+                            }
+                            &:nth-child(even) {
+                                margin-right: 0;
+                            }
+                            &:nth-child(n+3) {
+                                margin-top: 4%;
+                            }
                         }
                     }
                 }
                 &--3 {
                     li {
-                        width: 32%;
-                        margin: 0 1%;
+                        @media (min-width: 641px) {
+                            width: 32%;
+                            margin: 0 1%;
 
-                        &:nth-child(3n+1) {
-                            margin-left: 0;
+                            &:nth-child(3n+1) {
+                                margin-left: 0;
+                            }
+                            &:nth-child(3n+3) {
+                                margin-right: 0;
+                            }
+                            &:nth-child(n+4) {
+                                margin-top: 2%
+                            }
                         }
-                        &:nth-child(3n+3) {
-                            margin-right: 0;
-                        }
-                        &:nth-child(n+4) {
-                            margin-top: 2%
+                        @include respond-to(smartphone) {
+                            width: 100%;
+
+                            &:nth-child(n+2) {
+                                margin-top: 4%;
+                            }
                         }
                     }
                 }
@@ -439,6 +466,11 @@ form {
                             width: 80px;
                             height: 80px;
                             background-color: var(--color);
+
+                            @include respond-to(smartphone) {
+                                width: 50px;
+                                height: 50px;
+                            }
                         }
                     }
                 }
@@ -470,6 +502,10 @@ form {
                         }
                         &:last-child:not(:only-child) {
                             text-align: left;
+                        }
+
+                        @include respond-to(smartphone) {
+                            font-size: 1.5rem !important;
                         }
                     }
                 }
